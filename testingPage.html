@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Us</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+
+  <form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required><br><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" required></textarea><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="https://cdn.emailjs.com/sdk/2.6.4/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init("864@Chaun"); // Replace YOUR_USER_ID with your EmailJS user ID
+
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Prepare the email parameters
+        const emailParams = {
+          from_name: name,
+          from_email: email,
+          to_name: "Evans Chaun", // Replace with the recipient's name
+          subject: subject,
+          message: message
+        };
+
+        // Send the email
+        emailjs.send("864@Chaun", "864@Chaun", emailParams)
+          .then(function(response) {
+            alert("Email sent successfully!");
+            // Optionally, you can reset the form after successful submission
+            document.getElementById('contactForm').reset();
+          }, function(error) {
+            alert("Failed to send email. Please try again later.");
+            console.error("Email send error:", error);
+          });
+      });
+    })();
+  </script>
+</body>
+</html>
