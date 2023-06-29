@@ -29,3 +29,35 @@ document.getElementById('sendEmailLink').addEventListener('click', function(even
     // Optionally, you can reset the form after submission
     document.getElementById('contactForm').reset();
   });
+
+
+//   Resume
+ 
+function viewFile(fileUrl) {
+    const fileViewer = document.getElementById('fileViewer');
+    fileViewer.innerHTML = '';
+
+    const extension = fileUrl.split('.').pop().toLowerCase();
+
+    if (extension === 'pdf') {
+      const embed = document.createElement('embed');
+      embed.src = fileUrl;
+      embed.type = 'application/pdf';
+      embed.style.width = '100%';
+      embed.style.height = '600px';
+      embed.setAttribute('readonly', true);
+      fileViewer.appendChild(embed);
+    } else if (extension === 'doc' || extension === 'docx' || extension === 'xls' || extension === 'xlsx' || extension === 'ppt' || extension === 'pptx') {
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(fileUrl);
+      iframe.style.width = '100%';
+      iframe.style.height = '600px';
+      iframe.setAttribute('readonly', true);
+      fileViewer.appendChild(iframe);
+    } else {
+      const unsupportedMessage = document.createElement('p');
+      unsupportedMessage.textContent = 'Unsupported file format. Cannot display the file.';
+      fileViewer.appendChild(unsupportedMessage);
+    }
+   
+  }
