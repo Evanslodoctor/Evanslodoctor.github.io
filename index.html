@@ -1,701 +1,1064 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>devevans</title>
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      rel="shortcut icon"
+      href="assets/images/fav.png"
+      type="image/x-icon"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="assets/images/fav.jpg" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/slider/css/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/plugins/slider/css/owl.theme.default.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    <style>
+      /* header */
+      .continer-fluid .header-top {
+        background-color: rgb(255, 255, 255);
+        color: black;
+      }
+      .continer-fluid .header-bottom {
+        background-color: rgba(
+          255,
+          165,
+          0,
+          0.5
+        ); /* Orange color with 50% transparency */
+      }
+      #slide_text h1{
+        color: orange;
+       font-size: 6rem;
+      }
+
+      #follow {
+        color: orange;
+      }
+
+      .nav-row h1 {
+        color: blue;
+      }
+      .nav-row #menu a {
+        font-size: 1.2rem;
+        color: white;
+      }
+      .nav-row #menu a:hover {
+        background-color: blue;
+      }
+
+      #slider-Img{
+        height: 75vh;
+      }
+
+      /* skills */
+      .stat-title {
+        text-align: center;
+      }
+      .progress-bars {
+        margin-top: 20px;
+      }
+
+      .progress-bar {
+        margin-bottom: 15px;
+        text-align: left;
+        background-color: transparent;
+        color: black;
+        margin-top: 0;
+      }
+      .progress-bar p {
+        float: inline-start;
+      }
+
+      .prog-title {
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+
+      .prog-text {
+        margin-right: 10px;
+      }
+
+      .progress {
+        width: 100%;
+        height: 20px;
+        background-color: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      .progress .html {
+        width: 98%;
+        background-color: #4caf50; /* Green color */
+      }
+
+      /* Add similar styles for other skills */
+      .progress .css {
+        width: 95%;
+        background-color: #1a85f0; /* Blue color */
+      }
+
+      .progress .js {
+        width: 85%;
+        background-color: #f44336; /* Red color */
+      }
+
+      .progress .react {
+        width: 85%;
+        background-color: #ffc107; /* Yellow color */
+      }
+
+      .progress .node {
+        width: 97%;
+        background-color: #009688; /* Teal color */
+      }
+
+      .progress .python {
+        width: 80%;
+        background-color: #9c27b0; /* Purple color */
+      }
+
+      .progress .CSharp {
+        width: 90%;
+        background-color: #ff5722; /* Orange color */
+      }
+
+      .progress .SQL {
+        width: 99%;
+        background-color: #607d8b; /* Grey color */
+      }
+
+      /* services */
+      .circle {
+        display: inline-block;
+        position: relative;
+        width: 150px; /* Adjust the width to make the circle bigger */
+        height: 150px; /* Adjust the height to make the circle bigger */
+        border-radius: 50%; /* Ensures the element is circular */
+        background-color: #f7f8f8; /* Initial background color */
+        border: 10px solid #dcdf40; /* Initial border color */
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+        text-align: center;
+        line-height: 150px; /* Vertical centering */
+        font-size: 54px; /* Adjust icon size */
+      }
+
+      .circle i {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* opacity: 0; */
+        /* Hide icons by default */
+      }
+
+      .circle:hover i {
+        opacity: 1; /* Show icons on hover */
+      }
+
+      .circle:hover {
+        background-color: #d0db32; /* Background color on hover */
+        border-color: #55db34; /* Border color on hover */
+      }
+
+      /* Achievemtns */
+      #Achievemtns,
+      #Achievemtns h3 {
+        background-color: blue;
+        color: orange;
+      }
+
+      #Achievemtns p,
+      #Achievemtns span {
+        font-size: 1.2rem;
+      }
+      #Achievemtns h2 {
+        text-decoration: underline;
+      }
+      /* Footer */
+
+      .social-icons {
+        display: flex;
+      }
+
+      .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-right: 10px;
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .facebook {
+        background-color: #3b5998;
+      }
+      .linkedin {
+        background-color: #0077b5;
+      }
+      .github {
+        background-color: #333;
+      }
+      .twitter {
+        background-color: #1da1f2;
+      }
+      .instagram {
+        background-color: #c13584;
+      }
+
+      .icon i {
+        font-size: 20px;
+      }
+      #footer {
+        background-color: blue;
+     
+
+        font-size: 1.1rem;
+      }
+      #footer a {
+        
+        text-transform: bold;
+        font-size: larger;
+      }
+      #footer h2,  #footer span {
+      
+        color: rgb(247, 201, 117);
+        
+        font-size: 1.5rem;
+      }
+    #copy{
+      background-color: rgba(
+          255,
+          165,
+          0,
+          0.5
+        ); /* Orange color with 50% transparency */
+    }
+    #copyText{
+      color: blue;
+      font-size: 1.5rem;
+    }
+
+
+    /*  */
+    
+    </style>
   </head>
-  <body class="main-content">
-    <div id="fileViewer"></div>
-    <header class="container header active" id="home">
-      <div class="header-content">
-        <div class="left-header">
-          <div class="h-shape"></div>
-          <div class="image">
-            <img src="img/hero.png" alt="" />
+
+  <body>
+    <header class="continer-fluid">
+      <div class="header-top">
+        <div class="container">
+          <div class="row col-det">
+            <div class="col-lg-6 d-none d-lg-block">
+              <ul class="ulleft">
+                <li>
+                  <i class="far fa-envelope"></i>
+                  evanschaun2@gmail.com
+                  <span>|</span>
+                </li>
+                <li>
+                  <i class="fas fa-phone-volume"></i>
+                  +254743645826
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-3 col-md-6 follow">
+              <div class="social-icons">
+                <a
+                  href="https://www.facebook.com/evans.chaun.9/"
+                  class="icon facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/lodoctor/"
+                  class="icon linkedin"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="https://github.com/Evanslodoctor" class="icon github"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://twitter.com/evanslodoctor" class="icon twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/evanslodoctor"
+                  class="icon instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+
+            <div class="col-lg-3 d-none d-md-block col-md-6 btn-bhed">
+              <button class="btn btn-sm btn-default">YouTube Videos</button>
+              <button class="btn btn-sm btn-default">Blogs</button>
+            </div>
           </div>
         </div>
+      </div>
+      <div id="menu-jk" class="header-bottom">
+        <div class="container">
+          <div class="row nav-row">
+            <div class="col-lg-3 col-md-12 logo">
+              <a href="index.html">
+                <h1>Pro-Dev-Evans</h1>
+                <a data-toggle="collapse" data-target="#menu" href="#menu"
+                  ><i class="fas d-block d-lg-none small-menu fa-bars"></i
+                ></a>
+              </a>
+            </div>
+            <div id="menu" class="col-lg-9 col-md-12 d-none d-lg-block nav-col">
+              <ul class="navbad">
+                <li class="nav-item active">
+                  <a id="present" class="nav-link" href="index.html">Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">Services</a>
+                </li>
 
-        <div class="right-header">
-          <h1 class="name">
-            Mr <span>Evans Chaun.</span>
-            <small> SOFTWARE DEVELOPER </small>
-          </h1>
-          <p>
-            I am a passionate and versatile Full Stack Developer with a robust
-            background in web and software development. Armed with a
-            comprehensive skill set spanning both front-end and back-end
-            technologies, I specialize in crafting end-to-end solutions that not
-            only meet but exceed expectations, consistently delivering
-            exceptional user experiences
-          </p>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Gallery</a>
+                </li>
 
-          <div class="btn-con">
-            <a
-              href=""
-              class="main-btn"
-              onclick="window.open('Resume.pdf', '_blank'); return false;"
-            >
-              <span class="btn-text">Download Resume</span>
-              <span class="btn-icon"><i class="fas fa-download"></i></span>
-            </a>
+                <li class="nav-item">
+                  <a class="nav-link" href="#work">Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#footer">Contact</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
     </header>
 
-    <main>
-      <section class="container about" id="about">
-        <div class="main-title">
-          <h2>
-            About <span>me</span><span class="bg-text">Career Jurnny</span>
-          </h2>
+    <!-- ******************** Slider Starts Here ******************* -->
+    <div class="slider">
+      <!-- Set up your HTML -->
+      <div class="owl-carousel">
+        <div class="slider-img">
+          <div class="item">
+            <div id="slider-Img" class="slider-img" >
+              <img src="assets/images/slider/Chaun.png" alt="" />
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                  <div id="slide_text" class="animated bounceInDown slider-captions">
+                    <div>
+                      <h1 class="text">Full-Stack Developer</h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="about-container">
-          <div class="left-about">
-            <h4>Information About me</h4>
+        <!-- end of slide 1 -->
+        <div class="item">
+          <div id="slider-Img" class="slider-img" >
+            <img src="assets/images/slider/Chaun.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                <div id="slide_text" class="animated bounceInDown slider-captions">
+                  <div>
+                    <h1 class="text">Continuous Learner</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- end of slide 1 -->
+         <div class="item">
+          <div id="slider-Img" class="slider-img" >
+            <img src="assets/images/slider/Chaun.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                <div id="slide_text" class="animated bounceInDown slider-captions">
+                  <div>
+                    <h1 class="text">Open to Feedback</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- end of slide 1 -->
+         <div class="item">
+          <div id="slider-Img" class="slider-img" >
+            <img src="assets/images/slider/Chaun.png" alt="" />
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                <div id="slide_text" class="animated bounceInDown slider-captions">
+                  <div>
+                    <h1 class="text">Hi! I'm Evans Chaun</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <!--  ************************* About Us Starts Here ************************** -->
+
+    <div id="about" class="about-us container-fluid">
+      <div class="container">
+        <div class="row natur-row no-margin w-100">
+          <div class="text-part col-md-6">
+            <h2>About</h2>
             <p>
-              Passionate and versatile Full Stack Developer with a robust
-              background in web and software development. I've honed my skills
-              in HTML, CSS, JavaScript, React, Angular, Node.js, Django, and C#.
-              My career journey includes leading the development and
-              implementation of full-stack solutions at Digiview Training
-              Institute. I excel in crafting visually appealing and intuitive
-              applications, ensuring optimal user experiences. Proficient in
-              troubleshooting hardware and software issues, I've served as an IT
-              Technician and Tutor at Capital Highway Training College. My
-              commitment extends to delivering seamless IT operations, enhancing
-              overall system functionality. A creative problem solver, I thrive
-              in challenging environments, collaborating effectively with
-              cross-functional teams. Committed to staying current with industry
-              trends, I bring a continuous learning mindset to deliver
-              high-quality solutions
+              I'm Evans Loktari Chaun, a results-oriented and enthusiastic
+              computer science graduate from Meru University who earned a
+              first-class honors degree. I am currently leading the development
+              and execution of full-stack solutions at Digiview Training
+              Institute, where I am prospering in my role as a web developer. I
+              have a strong background working as an IT technician at Capital
+              Highway Training College, and my areas of expertise are system
+              upgrades, troubleshooting and fixing technical problems, and
+              offering all-around IT support.
             </p>
-            <div id="fileViewer"></div>
-            <div class="btn-con">
-              <a
-                href=""
-                class="main-btn"
-                onclick="window.open('Resume.pdf', '_blank'); return false;"
-              >
-                <span class="btn-text">Download Resume</span>
-                <span class="btn-icon"><i class="fas fa-download"></i></span>
+            <p>
+              I have a broad skill set because of my background in the service
+              and hospitality industries and my university degree. My desire,
+              honesty, and commitment to excellence motivate me to succeed in
+              all I do. I work well in dynamic circumstances where I can have a
+              significant impact, whether it is by tackling operational
+              difficulties or establishing and sustaining relationships with
+              customers and carriers.
+            </p>
+            <p>
+              I have always strived for greatness and have been constantly
+              curious about new things, which has shaped my career in
+              technology. My skills are varied; I am proficient in HTML5, CSS3,
+              and JavaScript, and I am knowledgeable with Node.js, React.js, and
+              MongoDB, among other frameworks and technologies. Along with
+              problem-solving and having a solid grasp of networking strategies,
+              my experience also includes agile development practices.
+            </p>
+          </div>
+          <div class="image-part col-md-6">
+            <div class="about-stats">
+              <h4 class="stat-title">My Skills</h4>
+              <div class="progress-bars">
+                <div class="progress-bar">
+                  <p class="prog-title">html5 98%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="html"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-bar">
+                  <p class="prog-title">css3 95%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="css"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-bar">
+                  <p class="prog-title">javascript 85%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="js"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-bar">
+                  <p class="prog-title">ReactJS 85%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="react"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-bar">
+                  <p class="prog-title">NodeJS 97%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="node"></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="progress-bar">
+                  <p class="prog-title">Python 80%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="python"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-bar">
+                  <p class="prog-title">C# 90%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="CSharp"></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="progress-bar">
+                  <p class="prog-title">SQL 99%</p>
+                  <div class="progress-con">
+                    <p class="prog-text"></p>
+                    <div class="progress">
+                      <span class="SQL"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ################# Mission Vision Start Here #######################--->
+
+    <section id="services" class="container-fluid mission-vision">
+      <div class="container"></div>
+    </section>
+
+    <!-- ################# Courses start Here#######################--->
+    <section id="popular-courses" class="events">
+      <div class="container">
+        <div class="session-title row">
+          <h2>SERVICES</h2>
+          <p>Below are my areas of specialty...</p>
+        </div>
+        <div class="event-ro row">
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-globe"></i>
+                <!-- Default icon -->
               </a>
-            </div>
-          </div>
-          <div class="right-about">
-            <div class="about-item">
-              <div class="abt-text">
-                <p class="large-text">50+</p>
-                <p class="small-text">
-                  Projects <br />
-                  Completed
-                </p>
-              </div>
-            </div>
-            <div class="about-item">
-              <div class="abt-text">
-                <p class="large-text">3+</p>
-                <p class="small-text">
-                  Years of <br />
-                  experience
-                </p>
-              </div>
-            </div>
-            <div class="about-item">
-              <div class="abt-text">
-                <p class="large-text">10+</p>
-                <p class="small-text">
-                  Happy <br />
-                  Clients
-                </p>
-              </div>
-            </div>
-            <div class="about-item">
-              <div class="abt-text">
-                <p class="large-text">10+</p>
-                <p class="small-text">
-                  Customer <br />
-                  reviews
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="about-stats">
-          <h4 class="stat-title">My Skills</h4>
-          <div class="progress-bars">
-            <div class="progress-bar">
-              <p class="prog-title">html5</p>
-              <div class="progress-con">
-                <p class="prog-text">98%</p>
-                <div class="progress">
-                  <span class="html"></span>
-                </div>
-              </div>
-            </div>
-            <div class="progress-bar">
-              <p class="prog-title">css3</p>
-              <div class="progress-con">
-                <p class="prog-text">95%</p>
-                <div class="progress">
-                  <span class="css"></span>
-                </div>
-              </div>
-            </div>
-            <div class="progress-bar">
-              <p class="prog-title">javascript</p>
-              <div class="progress-con">
-                <p class="prog-text">85%</p>
-                <div class="progress">
-                  <span class="js"></span>
-                </div>
-              </div>
-            </div>
-            <div class="progress-bar">
-              <p class="prog-title">ReactJS</p>
-              <div class="progress-con">
-                <p class="prog-text">85%</p>
-                <div class="progress">
-                  <span class="react"></span>
-                </div>
-              </div>
-            </div>
-            <div class="progress-bar">
-              <p class="prog-title">NodeJS</p>
-              <div class="progress-con">
-                <p class="prog-text">97%</p>
-                <div class="progress">
-                  <span class="node"></span>
-                </div>
-              </div>
-            </div>
 
-            <div class="progress-bar">
-              <p class="prog-title">Python</p>
-              <div class="progress-con">
-                <p class="prog-text">80%</p>
-                <div class="progress">
-                  <span class="python"></span>
-                </div>
-              </div>
+              <h4>Web Development</h4>
+
+              <p class="raises"><span> 4 years </span> > of experience</p>
+              <p class="desic">
+                I am proficient with HTML5, CSS3, JavaScript (ES6+), React.js,
+                Node.js, Express.js, Angular, and Django
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">C#</p>
-              <div class="progress-con">
-                <p class="prog-text">90%</p>
-                <div class="progress">
-                  <span class="CSharp"></span>
-                </div>
-              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-code"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>Programming Languages</h4>
+
+              <p class="raises"><span> 4 years </span> > of experience</p>
+              <p class="desic">
+                Proficient in a wide range of programming languages and
+                frameworks, including JavaScript, C#, Python, React.js, Django,
+                Angular, and Node.js.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
-            <div class="progress-bar">
-              <p class="prog-title">SQL</p>
-              <div class="progress-con">
-                <p class="prog-text">99%</p>
-                <div class="progress">
-                  <span class="SQL"></span>
-                </div>
-              </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-laptop-code"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>FULL-STACK DEVELOPMENT</h4>
+
+              <p class="raises"><span> 3 years </span> > of experience</p>
+              <p class="desic">
+                I excel in developing software solutions tailored to specific
+                needs, leveraging my skills in various programming languages and
+                frameworks.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
           </div>
         </div>
-        <h4 class="stat-title">My Timeline</h4>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
+        <!-- End or row -->
+        <div class="event-ro row">
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-chart-line"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>Data Science</h4>
+
+              <p class="raises"><span> 2 years </span> > of experience</p>
+              <p class="desic">
+                Proficient in data science methodologies and tools, including
+                data analysis, machine learning, and statistical modeling, using
+                Python, and related libraries such as NumPy, Pandas,
+                Scikit-learn, and TensorFlow.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
-            <p class="tl-duration">Feb, 2024 -</p>
-            <h5>Web Developer<span> - Digiview Training Institude</span></h5>
-            <p></p>
           </div>
-          <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-chart-pie"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>Data Visualization</h4>
+
+              <p class="raises"><span> 4 years </span> > of experience</p>
+              <p class="desic">
+                Skilled in creating visually appealing and informative data
+                visualizations using tools like excel, powerBI and Tableau.
+                Proficient in conveying insights from complex data sets through
+                charts, graphs, and interactive dashboards.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
-            <p class="tl-duration">2023,June - 2024,Feb</p>
-            <h5>
-              IT Technician<span> - Capital Highway Training College</span>
-            </h5>
-            <p></p>
           </div>
-          <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-laptop-code"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>FULL-STACK DEVELOPMENT</h4>
+
+              <p class="raises"><span> 3 years </span> > of experience</p>
+              <p class="desic">
+                I excel in developing software solutions tailored to specific
+                needs, leveraging my skills in various programming languages and
+                frameworks.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
-            <p class="tl-duration">2021 - 2022</p>
-            <h5>
-              Article Contributor<span>
-                - Section's Engineering Education (EngEd)</span
-              >
-            </h5>
-            <p></p>
           </div>
-          <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
+        </div>
+        <!-- end of row -->
+        <div class="event-ro row">
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-brain"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>AI & MACHINE LEARNING</h4>
+
+              <p class="raises"><span> 1 years </span> > of experience</p>
+              <p class="desic">
+                I have a keen interest and expertise in AI and machine learning,
+                exploring innovative ways to leverage these technologies in
+                software development.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
             </div>
-            <p class="tl-duration">2020 - 2021</p>
-            <h5>Certifications<span>SkillUp</span></h5>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-paint-brush"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>GRAPHIC DESIGN</h4>
+
+              <p class="raises"><span> 3 years </span> > of experience</p>
+              <p class="desic">
+                Skills: Figma, Adobe Creative Suite: Proficient in creating
+                visually stunning designs for both digital and print media using
+                tools like Figma and Adobe Creative Suite. I specialize in
+                creating engaging user interfaces and memorable brand
+                identities.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="event-box">
+              <a href="#" class="circle">
+                <i class="fas fa-tools"></i>
+                <!-- Default icon -->
+              </a>
+
+              <h4>ICT TECHNICIAN</h4>
+
+              <p class="raises"><span> 4 years </span> > of experience</p>
+              <p class="desic">
+                Skills: Network Design and Implementation, Troubleshooting
+                Experienced in designing and implementing network
+                infrastructures to ensure optimal connectivity and performance.
+              </p>
+              <button class="btn btn-success btn-sm">More information</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ################# CHTC Achievemts Starts Here#######################--->
+
+    <div id="Achievemtns" class="doctor-message">
+      <div class="inner-lay">
+        <div class="container">
+          <div class="row session-title">
+            <h2>My Achievemtns in Numbers</h2>
             <p>
-              Backend Programming and API <br />
-              Java Programming
+              As a Computer Science graduate with first-class honors, I've led
+              significant projects and tackled intricate technical challenges at
+              Digiview Training Institute. My adeptness in IT solutions has
+              boosted operational effectiveness at Capital Highway Training
+              College. Experience at NHIF and contributions to engineering
+              education underscore my diverse skills and dedication to
+              excellence.
             </p>
           </div>
-          <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
+          <div class="row">
+            <div class="col-sm-3 numb">
+              <h3>4+</h3>
+              <span>YEARS OF EXPEREANCE</span>
             </div>
-            <p class="tl-duration">2019 - 2023</p>
-            <h5>Computer Science Degree<span> - Meru University</span></h5>
-            <p></p>
-          </div>
-          <div class="timeline-item">
-            <div class="tl-icon">
-              <i class="fas fa-briefcase"></i>
+
+            <div class="col-sm-3 numb">
+              <h3>5+</h3>
+              <span>Published Articles</span>
             </div>
-            <p class="tl-duration">2014 - 2018</p>
-            <h5>High School student<span> - Churo Boys High</span></h5>
-            <p></p>
+            <div class="col-sm-3 numb">
+              <h3>4+</h3>
+              <span>Satisfied Clients</span>
+            </div>
+            <div class="col-sm-3 numb">
+              <h3>40+</h3>
+              <span>Successfully projects</span>
+            </div>
           </div>
         </div>
-      </section>
-      <section class="container" id="portfolio">
-        <div class="main-title">
-          <h2>My <span>Portfolio</span><span class="bg-text">My Work</span></h2>
-        </div>
-        <p class="port-text">
-          Here is some of my work that I've done in various programming
-          languages.
-        </p>
-        <div class="portfolios">
-          <div class="portfolio-item">
-            <div class="image">
-              <img src="./img/Digiview.jpg" alt="" />
+      </div>
+    </div>
+
+    <!--################### My work #######################--->
+    <section id="work" class="our-team team-11">
+      <div class="container">
+        <div class="page-nav no-margin row">
+          <div class="container">
+            <div class="row">
+              <h2>PORTFOLIO</h2>
+              <ul>
+                <li>
+                  <a href="index.html"
+                    ><i class="fas fa-home"></i> These are some of my work</a
+                  >
+                </li>
+              </ul>
             </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
+          </div>
+        </div>
+
+        <div id="portfolio" class="gallery">
+          <div class="container">
+            <div class="row">
+              <div class="gallery-filter d-none d-sm-block">
+                <button class="btn btn-default filter-button" data-filter="all">
+                  All
+                </button>
+                <button class="btn btn-default filter-button" data-filter="web">
+                  Websites
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="graphs"
+                >
+                  GRAPHIC DESIGN
+                </button>
+                <button class="btn btn-default filter-button" data-filter="ML">
+                  ML & Data science
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="Mobile"
+                >
+                  Mobile App Development
+                </button>
+                <button
+                  class="btn btn-default filter-button"
+                  data-filter="descktop"
+                >
+                  Desktop App Development
+                </button>
+              </div>
+              <br />
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter hdpe"
+              >
+                <img
+                  src="assets/images/events/image_01.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter sprinkle"
+              >
+                <img
+                  src="assets/images/events/image_02.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter hdpe"
+              >
+                <img
+                  src="assets/images/events/image_01.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter irrigation"
+              >
+                <img
+                  src="assets/images/events/image_03.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter spray"
+              >
+                <img
+                  src="assets/images/events/image_04.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter spray"
+              >
+                <img
+                  src="assets/images/events/image_05.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter irrigation"
+              >
+                <img
+                  src="assets/images/events/image_06.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-4 col-sm-3 col-xs-6 filter irrigation"
+              >
+                <img
+                  src="assets/images/events/image_07.jpgnn"
+                  class="img-responsive"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ######## my work End ####### -->
+
+    <!-- ################# Our Blog Starts Here#######################--->
+
+    <section id="footer" class="our-blog">
+      <div class="container"></div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <h2>... About me</h2>
+            <p>
+              Beyond my professional endeavors, I am committed to continuous
+              growth and development, as evidenced by my pursuit of
+              certifications in React, Python, Java, and Back End Development. I
+              am also passionate about contributing to the community, as
+              showcased through my role as an article contributor to Section's
+              Engineering Education (ENGED).
+            </p>
+            <p>
+              In essence, I am dedicated to leveraging my expertise and passion
+              for technology to drive innovation, solve complex challenges, and
+              contribute positively to the ever-evolving landscape of IT and web
+              development.
+            </p>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <h2>Useful Links</h2>
+            <ul class="list-unstyled link-list">
+              <li>
+                <a ui-sref="about" href="#/about">About</a
+                ><i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a ui-sref="portfolio" href="#/portfolio">Portfolio</a
+                ><i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a ui-sref="products" href="#/products">Latest jobs</a
+                ><i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a ui-sref="gallery" href="#/gallery">Gallery</a
+                ><i class="fa fa-angle-right"></i>
+              </li>
+              <li>
+                <a ui-sref="contact" href="#/contact">Contact</a
+                ><i class="fa fa-angle-right"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-sm-12 map-img">
+            <h2>Hire me, you can reach me out through my socials.</h2>
+            <address class="md-margin-bottom-40">
+              Nairobi, Kenya<br />
+              (254)743645826 <br />
+
+              <a href="mailto:info@anybiz.com" class=""
+                >evanschaun2@gmail.com.com</a
+              ><br />
+              <br />
+              <div class="social-icons">
                 <a
-                  href="https://www.digiview.ac.ke/service/short-courses/"
-                  class="icon"
-                  >Visit the Sit
-                  <i class="fa-solid fa-link"></i>
-                </a>
-                <!-- <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a> -->
+                  href="https://www.facebook.com/evans.chaun.9/"
+                  class="icon facebook"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/lodoctor/"
+                  class="icon linkedin"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a href="https://github.com/Evanslodoctor" class="icon github"
+                  ><i class="fab fa-github"></i
+                ></a>
+                <a href="https://twitter.com/evanslodoctor" class="icon twitter"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+                <a
+                  href="https://www.instagram.com/evanslodoctor"
+                  class="icon instagram"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </div>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <div class="image">
-              <img src="./img/CHTC.jpg" alt="" />
-            </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="https://github.com/Evanslodoctor/CHTC" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <!-- <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a> -->
-              </div>
-            </div>
-          </div>
-          <!-- <div class="portfolio-item">
-            <div class="image">
-              <img src="/img/port3.jpg" alt="" />
-            </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="#" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="portfolio-item">
-            <div class="image">
-              <img src="/img/port4.jpg" alt="" />
-            </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="#" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="portfolio-item">
-            <div class="image">
-              <img src="/img/port5.jpg" alt="" />
-            </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="#" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="portfolio-item">
-            <div class="image">
-              <img src="/img/port2.jpg" alt="" />
-            </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="#" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="portfolio-item">
-            <div class="image">
-              <img src="/img/port7.jpg" alt="" />
-            </div>
-            <div class="hover-items">
-              <h3>Project Source</h3>
-              <div class="icons">
-                <a href="#" class="icon">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-behance"></i>
-                </a>
-                <a href="#" class="icon">
-                  <i class="fab fa-youtube"></i>
-                </a>
-              </div>
-            </div>
-          </div> -->
-        </div>
-      </section>
-      <section class="container" id="blogs">
-        <div class="blogs-content">
-          <div class="main-title">
-            <h2>My <span>Blogs</span><span class="bg-text">My Blogs</span></h2>
-          </div>
-          <div class="blogs">
-            <div class="blog">
-              <img src="img/port6.jpg" alt="" />
-              <div class="blog-text">
-                <h4>How to Create Your Own Website</h4>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloribus natus voluptas, eos obcaecati recusandae amet?
-                </p>
-              </div>
-            </div>
-            <div class="blog">
-              <img src="img/blog1.jpg" alt="" />
-              <div class="blog-text">
-                <h4>How to Become an Expert in Web Design</h4>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloribus natus voluptas, eos obcaecati recusandae amet?
-                </p>
-              </div>
-            </div>
-            <div class="blog">
-              <img src="img/blog2.jpg" alt="" />
-              <div class="blog-text">
-                <h4>Become a Web Designer in 10 Days</h4>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloribus natus voluptas, eos obcaecati recusandae amet?
-                </p>
-              </div>
-            </div>
-            <div class="blog">
-              <img src="img/blog3.jpg" alt="" />
-              <div class="blog-text">
-                <h4>Debbuging made easy with Web Inspector</h4>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloribus natus voluptas, eos obcaecati recusandae amet?
-                </p>
-              </div>
-            </div>
-            <div class="blog">
-              <img src="img/port1.jpg" alt="" />
-              <div class="blog-text">
-                <h4>Get started with Web Design and UI Design</h4>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloribus natus voluptas, eos obcaecati recusandae amet?
-                </p>
-              </div>
-            </div>
-            <div class="blog">
-              <img src="img/port3.jpg" alt="" />
-              <div class="blog-text">
-                <h4>This is what you need to know about Web Design</h4>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Doloribus natus voluptas, eos obcaecati recusandae amet?
-                </p>
-              </div>
-            </div>
+            </address>
           </div>
         </div>
-      </section>
-      <section class="container contact" id="contact">
-        <div class="contact-container">
-          <div class="main-title">
-            <h2>Contact <span>Me</span><span class="bg-text">Contact</span></h2>
-          </div>
-          <div class="contact-content-con">
-            <div class="left-contact">
-              <h4>CContact Me:</h4>
-              <p>
-                Thank you for your interest in connecting with me. I would be
-                delighted to hear from you and discuss potential collaborations,
-                job opportunities, or any inquiries you may have. Please feel
-                free to reach out to me using the contact information provided:
-              </p>
-              <div class="contact-info">
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>Location</span>
-                  </div>
-                  <p>: Kenya, Laikipia</p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-envelope"></i>
-                    <span>Email</span>
-                  </div>
-                  <p>
-                    <span
-                      >:
-                      <a href="mailto:evanschaun@gmail.com.com"
-                        >evanschaun@gmail.com.com</a
-                      ></span
-                    >
-                  </p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-user-graduate"></i>
-                    <span>Education</span>
-                  </div>
-                  <p>
-                    <span>: Meru University, Meru-Kenya</span>
-                  </p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-user-graduate"></i>
-                    <span>Mobile Number</span>
-                  </div>
-                  <p>
-                    <span> <a href="tel:+254743645826">+254743645826</a></span>
-                  </p>
-                </div>
-                <div class="contact-item">
-                  <div class="icon">
-                    <i class="fas fa-globe-africa"></i>
-                    <span>Languages</span>
-                  </div>
-                  <p>
-                    <span>: English, Swahili</span>
-                  </p>
-                </div>
-              </div>
-              <div class="contact-icons">
-                <div class="contact-icon">
-                  <a
-                    href="https://www.facebook.com/evans.chaun.9/"
-                    target="_blank"
-                  >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a href="https://twitter.com/evanslodoctor" target="_blank">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="https://github.com/Evanslodoctor" target="_blank">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a
-                    href="https://www.instagram.com/evanslodoctor"
-                    target="_blank"
-                  >
-                    <i class="fab fa-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="right-contact">
-              <form action="" class="contact-form">
-                <div class="input-control i-c-2">
-                  <input
-                    type="text"
-                    required
-                    placeholder="YOUR NAME"
-                    id="name"
-                    name="name"
-                  />
-                  <input
-                    type="email"
-                    required
-                    placeholder="YOUR EMAIL"
-                    id="email"
-                    name="email"
-                  />
-                </div>
-                <div class="input-control">
-                  <input
-                    type="text"
-                    required
-                    placeholder="ENTER SUBJECT"
-                    id="subject"
-                    name="subject"
-                  />
-                </div>
-                <div class="input-control">
-                  <textarea
-                    id="message"
-                    name="message"
-                    cols="15"
-                    rows="8"
-                    placeholder="Message Here..."
-                  ></textarea>
-                </div>
-                <div class="submit-btn">
-                  <a href="#" class="main-btn" id="sendEmailLink">
-                    <span class="btn-text">Send Email</span>
-                    <span class="btn-icon"
-                      ><i class="fas fa-download"></i
-                    ></span>
-                  </a>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        <div id="fileViewer"></div>
-      </section>
-    </main>
 
-    <div class="controls">
-      <div class="control active-btn" data-id="home">
-        <small>Home</small> <i class="fas fa-home"></i>
+        <div class="nav-box row clearfix">
+          <div class="inner col-md-9 clearfix">
+            <ul class="footer-nav clearfix">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Gallery</a></li>
+              <li><a href="#">Servies</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="donate-link col-md-3">
+            <a href="#" class="btn btn-primary"
+              ><span class="btn-title">Don't hesitate to reach out !!</span></a
+            >
+          </div>
+        </div>
       </div>
-      <div class="control" data-id="about">
-        <small>About</small>
-        <i class="fas fa-user"></i>
-      </div>
-      <div class="control" data-id="portfolio">
-        <small>portfolio</small>
-        <i class="fas fa-briefcase"></i>
-      </div>
-      <!-- <div class="control" data-id="blogs">
-            <small>Blogs</small>
-            <i class="far fa-newspaper"></i>
-        </div> -->
-      <div class="control" data-id="contact">
-        <small>Contact</small>
-        <i class="fas fa-envelope-open"></i>
+    </footer>
+    <div id="copy" class="copy">
+      <div class="container">
+        <a href="https://www.smarteyeapps.com/" id="copyText"
+          >2022 &copy; Chaun Evans Portfolio</a
+        >
+
+        <span>
+          <a
+            href="https://www.facebook.com/evans.chaun.9/"
+            class="icon facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/lodoctor/" class="icon linkedin"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="https://github.com/Evanslodoctor" class="icon github"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://twitter.com/evanslodoctor" class="icon twitter"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/evanslodoctor"
+            class="icon instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </span>
       </div>
     </div>
-    <div class="theme-btn">
-      <small>Mode</small>
-      <i class="fas fa-adjust"></i>
-    </div>
-    <script src="app.js"></script>
-
-    <script>
-      function viewFile(fileUrl) {
-        const fileViewer = document.getElementById("fileViewer");
-        fileViewer.innerHTML = "";
-
-        const extension = fileUrl.split(".").pop().toLowerCase();
-
-        if (extension === "pdf") {
-          const embed = document.createElement("embed");
-          embed.src = fileUrl;
-          embed.type = "application/pdf";
-          embed.style.width = "100%";
-          embed.style.height = "600px";
-          embed.setAttribute("readonly", true);
-          fileViewer.appendChild(embed);
-        } else if (
-          extension === "doc" ||
-          extension === "docx" ||
-          extension === "xls" ||
-          extension === "xlsx" ||
-          extension === "ppt" ||
-          extension === "pptx"
-        ) {
-          const iframe = document.createElement("iframe");
-          iframe.src =
-            "https://view.officeapps.live.com/op/embed.aspx?src=" +
-            encodeURIComponent(fileUrl);
-          iframe.style.width = "100%";
-          iframe.style.height = "600px";
-          iframe.setAttribute("readonly", true);
-          fileViewer.appendChild(iframe);
-        } else {
-          const unsupportedMessage = document.createElement("p");
-          unsupportedMessage.textContent =
-            "Unsupported file format. Cannot display the file.";
-          fileViewer.appendChild(unsupportedMessage);
-        }
-      }
-    </script>
+    
+  
   </body>
+
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
+  <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </html>
