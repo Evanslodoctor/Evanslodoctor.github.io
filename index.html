@@ -267,6 +267,69 @@
         font-size: 1.5rem;
       }
 
+      /* Gallary  */
+      /* Set a fixed width for each gallery item */
+      /* Set a fixed width and height for each gallery item */
+      /* Set a fixed width and height for each gallery item */
+      .gallery_product {
+        width: 25%; /* Adjust this value as needed */
+        padding: 5px; /* Add spacing between images */
+        position: relative; /* Enable relative positioning for the container */
+        overflow: hidden; /* Hide overflow content */
+      }
+
+      /* Ensure images fill the container without stretching */
+      .gallery_product img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+        transition: transform 0.5s ease; /* Smooth transition effect */
+      }
+
+      /* Style for the container that wraps each image */
+      .image-container {
+        position: relative; /* Ensure the text stays within the container */
+      }
+
+      /* Style for the text below each image */
+      .image-text {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(
+          241,
+          237,
+          237,
+          0.9
+        ); /* Semi-transparent background */
+        color: blue;
+        padding: 5px;
+        text-align: center;
+        font-size: 17px;
+        z-index: 1; /* Ensure text appears above the image */
+        pointer-events: none; /* Allow pointer events to pass through text */
+      }
+
+      /* Scale up the image on hover */
+      .gallery_product:hover img {
+        transform: scale(2.2); /* Adjust the scale factor as needed */
+        cursor: pointer; /* Change cursor to indicate clickable */
+        animation: zoomInOut 10s infinite alternate;
+      }
+
+      /* Keyframes for continuous zoom animation */
+      @keyframes zoomInOut {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(2.5); /* Adjust the maximum scale factor if needed */
+        }
+        100% {
+          transform: scale(2.2);
+        }
+      }
       /*  */
     </style>
   </head>
@@ -866,9 +929,51 @@
                 class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter graphs"
               >
                 <img
+                  src="assets/images/events/Graphics/CHTC-28-Feb-2024.jpg"
+                  class="img-responsive"
+                />
+
+                <div class="image-text">
+                  <h3>CHTC Poster</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 28
+                    Feb. 2024
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter graphs"
+              >
+                <img
                   src="assets/images/events/Graphics/p1.jpeg"
                   class="img-responsive"
                 />
+
+                <div class="image-text">
+                  <h3>CHTC Poster</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 06
+                    Jan. 2024
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter graphs"
+              >
+                <img
+                  src="assets/images/events/Graphics/St-maria-17-Jan-2024.jpg"
+                  class="img-responsive"
+                />
+
+                <div class="image-text">
+                  <h3>ST. MARIA</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 17
+                    Jan. 2024
+                  </p>
+                </div>
               </div>
 
               <div
@@ -878,6 +983,14 @@
                   src="assets/images/events/Graphics/p2.jpeg"
                   class="img-responsive"
                 />
+
+                <div class="image-text">
+                  <h3>CHTC Poster</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 21
+                    Dec. 2023
+                  </p>
+                </div>
               </div>
 
               <div
@@ -887,15 +1000,13 @@
                   src="assets/images/events/Graphics/p3.jpeg"
                   class="img-responsive"
                 />
-              </div>
-
-              <div
-                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter graphs"
-              >
-                <img
-                  src="assets/images/events/Graphics/p4.jpeg"
-                  class="img-responsive"
-                />
+                <div class="image-text">
+                  <h3>CHTC Poster</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 08
+                    Dec. 2023
+                  </p>
+                </div>
               </div>
 
               <div
@@ -905,6 +1016,13 @@
                   src="assets/images/events/Graphics/p5.jpeg"
                   class="img-responsive"
                 />
+                <div class="image-text">
+                  <h3>CHTC Poster</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 02
+                    Dec. 2023
+                  </p>
+                </div>
               </div>
 
               <div
@@ -914,6 +1032,13 @@
                   src="assets/images/events/Graphics/p6.PNG"
                   class="img-responsive"
                 />
+                <div class="image-text">
+                  <h3>CHTC Brochure</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 07
+                    Jun. 2023
+                  </p>
+                </div>
               </div>
 
               <div
@@ -923,6 +1048,30 @@
                   src="assets/images/events/Graphics/p7.PNG"
                   class="img-responsive"
                 />
+
+                <div class="image-text">
+                  <h3>CHTC Brochure</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 07
+                    Jun. 2023
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter graphs"
+              >
+                <img
+                  src="assets/images/events/Graphics/Unison-28-may-2023.jpg"
+                  class="img-responsive"
+                />
+                <div class="image-text">
+                  <h3>Unison Poster</h3>
+                  <p class="raises">
+                    <span style="color: orange"> Graphic Design </span> / 28
+                    May. 2023
+                  </p>
+                </div>
               </div>
 
               <!--  -->
