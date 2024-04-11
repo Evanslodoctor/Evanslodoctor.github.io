@@ -331,7 +331,24 @@
           transform: scale(2.2);
         }
       }
-      /*  */
+      /*  whatsapp*/
+      .whatsapp-icon {
+        position: fixed;
+        bottom: 20px; /* Adjust as needed */
+        left: 20px; /* Adjust as needed */
+        z-index: 9999; /* Ensure the icon appears above other content */
+        font-size: 40px; /* Adjust the icon size as needed */
+        color: #fff; /* Icon color (white) */
+        background-color: #25d366; /* WhatsApp green color */
+        border-radius: 50%; /* Make the icon circular */
+        padding: 20px; /* Add some padding to make the icon larger */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+        transition: transform 0.3s ease; /* Add a smooth transition on hover */
+      }
+
+      .whatsapp-icon:hover {
+        transform: scale(1.1); /* Scale the icon slightly on hover */
+      }
     </style>
   </head>
 
@@ -873,7 +890,7 @@
         </div>
       </div>
     </div>
-    
+
     <!--################### My work #######################--->
     <section id="work" class="our-team team-11">
       <div class="container">
@@ -1252,6 +1269,15 @@
         </span>
       </div>
     </div>
+    <!-- whatsapp icon -->
+    <a
+      href="https://wa.me/254743645826"
+      class="whatsapp-icon"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
   </body>
 
   <script src="assets/js/jquery-3.2.1.min.js"></script>
