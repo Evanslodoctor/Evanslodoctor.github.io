@@ -349,6 +349,27 @@
       .whatsapp-icon:hover {
         transform: scale(1.1); /* Scale the icon slightly on hover */
       }
+
+      /* resume */
+      /* Position the button */
+      .download-resume {
+        position: fixed;
+        top: 0px; /* Adjust as needed */
+        right: 100px; /* Adjust as needed */
+        z-index: 999; /* Ensure it's above other elements */
+        background-color: red; /* Button background color */
+        color: #ffffff; /* Button text color */
+        border: none;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      /* Change button color on hover */
+      .download-resume:hover {
+        background-color: #0056b3; /* Hover background color */
+      }
     </style>
   </head>
 
@@ -1273,7 +1294,10 @@
             </ul>
           </div>
           <div class="donate-link col-md-3">
-            <a href="#" class="btn btn-primary"
+            <a
+              href="https://wa.me/254743645826?text=Hello%20Mr.%20Chaun%2C%20I%20have%20an%20opportunity%20and%20I%20am%20impressed%20with%20your%20work.%20I%20would%20like%20to%20discuss%20further."
+              alt="https://web.whatsapp.com/send?phone=254743645826"
+              class="btn btn-primary"
               ><span class="btn-title">Don't hesitate to reach out !!</span></a
             >
           </div>
@@ -1318,6 +1342,16 @@
       rel="noopener noreferrer"
     >
       <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- resume -->
+
+    <a
+      href="/assets/pdf/CV_Evans_Chaun_dev.pdf"
+      download
+      class="download-resume"
+    >
+      <i class="fas fa-file-pdf">Resume</i>
     </a>
   </body>
 
