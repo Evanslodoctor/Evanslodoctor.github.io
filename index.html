@@ -1346,12 +1346,8 @@
 
     <!-- resume -->
 
-    <a
-      href="/assets/pdf/CV_Evans_Chaun_dev.pdf"
-      download
-      class="download-resume"
-    >
-      <i class="fas fa-file-pdf">Resume</i>
+    <a href="assets/pdf/CV_Evans_Chaun_dev.pdf" onclick="openOrDownload(event)" class="download-resume">
+      <i class="fas fa-file-pdf"></i> Resume
     </a>
   </body>
 
@@ -1361,4 +1357,17 @@
   <script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
   <script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
   <script src="assets/js/script.js"></script>
+  <script>
+    function openOrDownload(event) {
+      // Check if the browser supports the download attribute
+      if ('download' in document.createElement('a')) {
+        // Browser supports download attribute, so download the file
+        // No action needed as the default behavior of the download attribute will handle it
+      } else {
+        // Browser does not support download attribute, so open the file in a new tab
+        event.preventDefault(); // Prevent default link action (opening the file)
+        window.open(event.target.href, '_blank'); // Open the file in a new tab
+      }
+    }
+  </script>
 </html>
