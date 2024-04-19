@@ -44,16 +44,7 @@
           0.5
         ); /* Orange color with 50% transparency */
       }
-      #slide_text h1 {
-        color: orange;
-        font-size: 6rem;
-      }
 
-      @media (max-width: 576px) {
-        #slide_text h1 {
-          font-size: 1.3rem; /* Adjust the font size as needed for smaller screens */
-        }
-      }
 
       #follow {
         color: orange;
@@ -70,8 +61,41 @@
         background-color: blue;
       }
 
-      #slider-Img {
+            /* slide */
+            #slider-Img {
         height: 75vh;
+      }
+            #slide_text h1 {
+        color: orange;
+        font-size: 6rem;
+        text-align: center;
+      }
+      @media (max-width: 806px) {
+        #slide_text h1 {
+          font-size: 1 rem; /* Adjust the font size as needed for smaller screens */
+        }
+        #slider-Img {
+        height: 60vh;
+      }
+      }
+
+
+      @media (max-width: 576px) {
+        #slide_text h1 {
+          font-size: 20px; /* Adjust the font size as needed for smaller screens */
+        }
+        #slider-Img {
+        height: 50vh;
+      }
+      }
+
+      @media (max-width: 400px) {
+        #slide_text h1 {
+          font-size: 20px; /* Adjust the font size as needed for smaller screens */
+        }
+        #slider-Img {
+        height: 40vh;
+      }
       }
 
       /* about */
@@ -370,6 +394,9 @@
       .download-resume:hover {
         background-color: #0056b3; /* Hover background color */
       }
+
+
+
     </style>
   </head>
 
@@ -478,6 +505,7 @@
                 <div
                   class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12"
                 >
+                
                   <div
                     id="slide_text"
                     class="animated bounceInDown slider-captions"
@@ -966,7 +994,7 @@
 
               <!-- Web Development -->
               <div
-                class="gallery_product col-lg-3 col-md-3 col-sm-4 col-xs-6 filter web"
+                class="gallery_product col-lg-3 col-md-4 col-sm-6 col-12 filter web"
               >
                 <img
                   src="assets/images/events/web/timetabling.PNG"
