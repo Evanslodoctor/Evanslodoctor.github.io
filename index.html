@@ -135,38 +135,38 @@
         border-radius: 10px;
       }
 
-      .progress .html {
+      .progress .pl {
         width: 98%;
         background-color: #4caf50; /* Green color */
       }
 
       /* Add similar styles for other skills */
-      .progress .css {
-        width: 95%;
+      .progress .fl{
+        width: 90%;
         background-color: #1a85f0; /* Blue color */
       }
 
       .progress .js {
-        width: 85%;
+        width: 90%;
         background-color: #f44336; /* Red color */
       }
 
-      .progress .react {
+      .progress .ds {
         width: 85%;
         background-color: #ffc107; /* Yellow color */
       }
 
-      .progress .node {
+      .progress .ICT {
         width: 97%;
         background-color: #009688; /* Teal color */
       }
 
-      .progress .python {
-        width: 80%;
+      .progress .ss {
+        width: 88%;
         background-color: #9c27b0; /* Purple color */
       }
 
-      .progress .CSharp {
+      .progress .gd {
         width: 90%;
         background-color: #ff5722; /* Orange color */
       }
@@ -392,6 +392,128 @@
       .download-resume:hover {
         background-color: #0056b3; /* Hover background color */
       }
+      /* slider */
+      .background-section {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+        }
+        .background-image {
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        .left-bg {
+            background-image: url('assets/images/slider/chaun2.png'); /* Replace with your first image URL */
+           
+        }
+        .right-bg {
+            background-image: url('assets/images/slider/Chaun.png'); /* Replace with your second image URL */
+        }
+        .moving-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+    color: orange;
+    background: rgba(0, 0, 0, 0.7); /* Optional: background for better readability */
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 3rem;
+    overflow: hidden;
+    line-height: 1.5;
+    white-space: nowrap; /* Ensure text is on one line for animation */
+}
+
+/* Typing animation for paragraphs */
+.moving-text p {
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap; /* Keep text in a single line */
+    animation: typing 0s steps(30, end) 0s forwards, blink-caret 3s step-end infinite;
+    overflow: hidden; /* Hide overflow text */
+    border-right: 2px solid white; /* Caret effect */
+    width: 80vh; /* Start with width 0 for typing effect */
+}
+
+/* Typing effect keyframes */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+/* Blinking caret effect */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+}
+
+@media (max-width: 1350px) {
+    .moving-text {
+        width: 90%;
+        padding: 10px;
+        font-size: 2.6rem;
+    }
+    .moving-text p {
+        font-size: 2.6rem;
+        width: 100%; /* Allow paragraphs to be fully visible */
+    }
+}
+@media (max-width: 910px) {
+    .moving-text {
+        width: 90%;
+        padding: 10px;
+        font-size: 1.9rem;
+    }
+    .moving-text p {
+        font-size: 1.8rem;
+        width: 100%; /* Allow paragraphs to be fully visible */
+    }
+}    
+@media (max-width: 767px) {
+    .moving-text {
+        width: 90%;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .moving-text p {
+        font-size: 1rem;
+        width: 100%; /* Allow paragraphs to be fully visible */
+    }
+}
+@media (max-width: 600px) {
+    .moving-text {
+        width: 90%;
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    .moving-text p {
+        font-size: 1rem;
+        width: 100%; /* Allow paragraphs to be fully visible */
+    }
+}
+@media (max-width: 400px) {
+    .moving-text {
+        width: 90%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .moving-text p {
+        font-size: 0.9rem;
+        width: 100%; /* Allow paragraphs to be fully visible */
+    }
+}
+/* Additional custom styles for ordered list */
+.custom-ol {
+            padding-left: 1.5rem; /* Adjust padding as needed */
+            font-size: 1rem; /* Adjust font size */
+        }
+        .custom-ol li {
+            margin-bottom: 0.75rem; /* Space between list items */
+        }
     </style>
   </head>
 
@@ -487,102 +609,22 @@
     </header>
 
     <!-- ******************** Slider Starts Here ******************* -->
-    <div class="slider">
-      <!-- Set up your HTML -->
-      <div class="owl-carousel">
-        <div class="slider-img">
-          <div class="item">
-            <div id="slider-Img" class="slider-img">
-              <img src="assets/images/slider/Chaun.png" alt="" />
-            </div>
-            <div class="container">
-              <div class="row">
-                <div
-                  class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12"
-                >
-                  <div
-                    id="slide_text"
-                    class="animated bounceInDown slider-captions"
-                  >
-                    <div>
-                      <h1 class="text">Full-Stack Developer</h1>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end of slide 1 -->
-        <div class="item">
-          <div id="slider-Img" class="slider-img">
-            <img src="assets/images/slider/Chaun.png" alt="" />
-          </div>
-          <div class="container">
-            <div class="row">
-              <div
-                class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12"
-              >
-                <div
-                  id="slide_text"
-                  class="animated bounceInDown slider-captions"
-                >
-                  <div>
-                    <h1 class="text">Continuous Learner</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- end of slidewe 1  -->
-        <div class="item">
-          <div id="slider-Img" class="slider-img">
-            <img src="assets/images/slider/Chaun.png" alt="" />
-          </div>
-          <div class="container">
-            <div class="row">
-              <div
-                class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12"
-              >
-                <div
-                  id="slide_text"
-                  class="animated bounceInDown slider-captions"
-                >
-                  <div>
-                    <h1 class="text">Open to Feedback</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- end of slide 1 -->
-        <div class="item">
-          <div id="slider-Img" class="slider-img">
-            <img src="assets/images/slider/Chaun.png" alt="" />
-          </div>
-          <div class="container">
-            <div class="row">
-              <div
-                class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8 col-sm-12 col-xs-12"
-              >
-                <div
-                  id="slide_text"
-                  class="animated bounceInDown slider-captions"
-                >
-                  <div>
-                    <h1 class="text">Hi! I'm Evans Chaun</h1>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <section class="background-section row no-gutters">
+      <div class="col-md-6 background-image left-bg"></div>
+      <div class="col-md-6 background-image right-bg"></div>
+      <div class="moving-text" id="moving-text">
+        <P class="typing">Welcome to My Portfolio</P>
+          <p class="typing">Hi, I'm Evans Loktari Chaun,  </p>
+          <p class="typing">a software developer and data scientist </p>
+          <p class="typing">with a passion for creating innovative solutions </p>
+          <p class="typing">and driving data-driven decision-making. </p>
+          <p class="typing">Explore my projects, skills, and experiences </p>
+          <p class="typing"> to learn more about how I can contribute to your organization</p>
+          <p class="typing"> Feel free to reach out for collaboration or opportunities.</p>
+          <p class="typing">Contact: +254743645826 or email: evanschaun2@gmail.com</p>
+         
       </div>
-    </div>
+  </section>
 
     <!--  ************************* About Us Starts Here ************************** -->
 
@@ -592,112 +634,73 @@
           <div class="text-part col-md-6">
             <h2>About</h2>
             <p>
-              I'm Evans Loktari Chaun, a results-oriented and enthusiastic
-              computer science graduate from Meru University who earned a
-              first-class honors degree. I am currently leading the development
-              and execution of full-stack solutions at Digiview Training
-              Institute, where I am prospering in my role as a web developer. I
-              have a strong background working as an IT technician at Capital
-              Highway Training College, and my areas of expertise are system
-              upgrades, troubleshooting and fixing technical problems, and
-              offering all-around IT support.
+              I am a highly motivated, conscientious, and competent software developer and data scientist with in-depth knowledge and expertise in the tech industry. With a proven track record of achievement, I bring positivity, support, and a creative mindset to any team. I pride myself on taking ownership of challenging problems, maintaining high standards, and assisting my employer in achieving their commercial objectives. With over two years of experience in similar roles, I can be relied upon to deliver exceptional results while always seeking ways to help my employer grow and save money.
+
             </p>
-            <p>
-              I have a broad skill set because of my background in the service
-              and hospitality industries and my university degree. My desire,
-              honesty, and commitment to excellence motivate me to succeed in
-              all I do. I work well in dynamic circumstances where I can have a
-              significant impact, whether it is by tackling operational
-              difficulties or establishing and sustaining relationships with
-              customers and carriers.
-            </p>
-            <p>
-              I have always strived for greatness and have been constantly
-              curious about new things, which has shaped my career in
-              technology. My skills are varied; I am proficient in HTML5, CSS3,
-              and JavaScript, and I am knowledgeable with Node.js, React.js, and
-              MongoDB, among other frameworks and technologies. Along with
-              problem-solving and having a solid grasp of networking strategies,
-              my experience also includes agile development practices.
-            </p>
+           <h1>Education</h1>
+           <h4>Bachelor of Science in Computer Science (First Class Honors)</h4>
+           <H4>ALX Software Engineering Program</H4>
           </div>
           <div class="image-part col-md-6">
             <div class="about-stats">
               <h4 class="stat-title">My Skills</h4>
               <div class="progress-bars">
                 <div class="progress-bar">
-                  <p class="prog-title">html5 98%</p>
+                  <p class="prog-title">Programming Languages: <small>C#, Python, C, Java, C++, PHP, R, SQL, JavaScript </small></p>
                   <div class="progress-con">
                     <p class="prog-text"></p>
                     <div class="progress">
-                      <span class="html"></span>
+                      <span class="pl"></span>
                     </div>
                   </div>
                 </div>
                 <div class="progress-bar">
-                  <p class="prog-title">css3 95%</p>
+                  <p class="prog-title">Frameworks & Libraries: <small> React.js, Vue, Angular, Express.js, Django, Node.js </small></p>
                   <div class="progress-con">
                     <p class="prog-text"></p>
                     <div class="progress">
-                      <span class="css"></span>
+                      <span class="fl"></span>
                     </div>
                   </div>
                 </div>
                 <div class="progress-bar">
-                  <p class="prog-title">javascript 85%</p>
+                  <p class="prog-title">Data Science: <small>Machine Learning, Power BI, Tableau, SAS, SSAS, Excel, Hadoop, Spark, Python, R</small></p>
                   <div class="progress-con">
                     <p class="prog-text"></p>
                     <div class="progress">
-                      <span class="js"></span>
+                      <span class="ds"></span>
                     </div>
                   </div>
                 </div>
                 <div class="progress-bar">
-                  <p class="prog-title">ReactJS 85%</p>
+                  <p class="prog-title">ICT Support Skills: <small> System Maintenance and Optimization, Technical Support, Queue Management Systems, Disaster Recovery Planning, Hardware/Software installation</small></p>
                   <div class="progress-con">
                     <p class="prog-text"></p>
                     <div class="progress">
-                      <span class="react"></span>
+                      <span class="ict"></span>
                     </div>
                   </div>
                 </div>
                 <div class="progress-bar">
-                  <p class="prog-title">NodeJS 97%</p>
+                  <p class="prog-title">Soft Skills: <small>Continuous Learner and Open to Feedback, Analytical Skills, Communication and Collaboration Abilities, Detail-Oriented, Problem-Solving, Proactive and Self-Motivated, Excellent Time Management, Team Player with a Positive Attitude </small></p>
                   <div class="progress-con">
                     <p class="prog-text"></p>
                     <div class="progress">
-                      <span class="node"></span>
+                      <span class="ss"></span>
                     </div>
                   </div>
                 </div>
 
                 <div class="progress-bar">
-                  <p class="prog-title">Python 80%</p>
+                  <p class="prog-title">Graphic Design: <small> Adobe InDesign, Adobe Photoshop, Adobe Illustrator</small></p>
                   <div class="progress-con">
                     <p class="prog-text"></p>
                     <div class="progress">
-                      <span class="python"></span>
+                      <span class="gd"></span>
                     </div>
                   </div>
                 </div>
-                <div class="progress-bar">
-                  <p class="prog-title">C# 90%</p>
-                  <div class="progress-con">
-                    <p class="prog-text"></p>
-                    <div class="progress">
-                      <span class="CSharp"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="progress-bar">
-                  <p class="prog-title">SQL 99%</p>
-                  <div class="progress-con">
-                    <p class="prog-text"></p>
-                    <div class="progress">
-                      <span class="SQL"></span>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -941,13 +944,17 @@
           <div class="row session-title">
             <h2>My Achievemtns in Numbers</h2>
             <p>
-              As a Computer Science graduate with first-class honors, I've led
-              significant projects and tackled intricate technical challenges at
-              Digiview Training Institute. My adeptness in IT solutions has
-              boosted operational effectiveness at Capital Highway Training
-              College. Experience at NHIF and contributions to engineering
-              education underscore my diverse skills and dedication to
-              excellence.
+              <ol class="custom-ol">
+                <li> 1. Developed, tested, and deployed the Capital Highway Training College website and Learning Management System (LMS), enhancing online learning experiences and increasing user engagement by 30%.</li>
+                <li> 2. Enhanced the school’s ICT infrastructure at Capital Highway Training College, reducing technical issues by 20%.</li>
+                <li> 3. Streamlined the LMS deployment at Capital Highway Training College, leading to a 30% increase in user engagement.</li>
+                <li> 4. Designed and developed promotional materials for Capital Highway Training College and Digiview Training Institute, improving student enrollment by 15%.</li>
+                <li> 5. Achieved a 25% increase in operational efficiency at Digiview Training Institute through targeted data analysis projects.</li>
+                <li> 6. Improved user satisfaction scores by 15% at Digiview Training Institute through maintaining responsive web applications.</li>
+                <li> 7. Enhanced decision-making speed by developing dynamic dashboards and reports at Digiview Training Institute.</li>
+                <li> 8. Reduced error rates in data reports by 20% through statistical analysis and hypothesis testing at NHIF.</li>
+                <li> 9. Improved data accuracy by 20% through data collection, cleaning, preprocessing, and analysis at NHIF.</li>
+            </ol>
             </p>
           </div>
           <div class="row">
@@ -1662,5 +1669,24 @@
         window.open(event.target.href, "_blank"); // Open the file in a new tab
       }
     }
+
+  // JavaScript to cycle through paragraphs
+  const paragraphs = document.querySelectorAll('#moving-text p');
+        let current = 0;
+
+        function startTypingAnimation() {
+            paragraphs.forEach((p, index) => {
+                p.classList.remove('typing');
+                p.style.display = 'none'; // Hide all paragraphs
+            });
+            paragraphs[current].style.display = 'block'; // Show the current paragraph
+            paragraphs[current].classList.add('typing');
+            current = (current + 1) % paragraphs.length;
+            setTimeout(startTypingAnimation, 6000); // Adjust timing as needed
+        }
+
+        // Initialize typing animation
+        startTypingAnimation();
   </script>
+  
 </html>
