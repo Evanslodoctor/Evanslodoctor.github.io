@@ -115,3 +115,21 @@
     
 })(jQuery);
 
+function handleCVDownload() {
+    const fileUrl = 'evans-chaun-CV.pdf'; // Path to the file
+
+    // Open the file in a new tab for viewing
+    const newTab = window.open(fileUrl, '_blank');
+    if (!newTab) {
+        alert('Please enable pop-ups in your browser to view the file.');
+        return; // Stop further actions if pop-ups are blocked
+    }
+
+    // Create a temporary anchor element to trigger the file download
+    const tempAnchor = document.createElement('a');
+    tempAnchor.href = fileUrl;
+    tempAnchor.download = 'evans-chaun-CV.pdf'; // Set the downloaded file name
+    document.body.appendChild(tempAnchor);
+    tempAnchor.click(); // Trigger the download
+    document.body.removeChild(tempAnchor); // Clean up the temporary anchor
+}

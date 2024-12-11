@@ -305,3 +305,13 @@ h6,
     padding: 0;
     list-style-type: none;
 }
+
+
+ /* Style for the WhatsApp icon container */
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 10px; /* Distance from the bottom of the screen */
+    right: 10px; /* Distance from the right of the screen */
+    z-index: 1000; /* Ensure the icon stays on top */
+}

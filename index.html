@@ -85,9 +85,9 @@
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
                     <div class="typed-text d-none">Software Developer , Web Developer, Back End Developer, Web and Graphic Designer, API Developer, IT Trainer and Mentor</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="" class="btn btn-outline-light mr-5">Download CV</a>
+                        <button id="downloadCV" class="btn btn-outline-light mr-5" onclick="handleCVDownload()">Download CV</button>
                         <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                            data-src="#" data-target="#videoModal">
                             <span></span>
                         </button>
                         <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
@@ -99,37 +99,68 @@
     <!-- Header End -->
 
 
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+  <!-- About Start -->
+<div class="container-fluid py-5" id="about">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
+            <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-lg-5 pb-4 pb-lg-0">
+                <img class="img-fluid rounded w-100" src="img/chaun2.png" alt="">
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/chaun2.png" alt="">
+            <div class="col-lg-7">
+                <h3 class="mb-4">Software Developer</h3>
+                <p>I’m a dedicated Software Developer, with expertise in optimizing web applications and enhancing data insights for better decision-making. With a proven record of improving operational efficiency by up to 25% and page load times by 20%, I combine technical proficiency with creativity to drive projects forward. Skilled in technologies like Python, React, Laravel, and data visualization tools such as Power BI, I am passionate about leveraging my skills to contribute to impactful projects and foster team growth</p>
+                <div class="row mb-3">
+                    <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Evans Chaun</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">24 April</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary"></span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">2 Years</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+254 743 645 826</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">evanschaun2@gmail.com</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Embakasi, Nairobi, Kenya</span></h6></div>
+                    <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
                 </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Software Developer</h3>
-                    <p>I’m a dedicated Software Developer, with expertise in optimizing web applications and enhancing data insights for better decision-making. With a proven record of improving operational efficiency by up to 25% and page load times by 20%, I combine technical proficiency with creativity to drive projects forward. Skilled in technologies like Python, React, Laravel, and data visualization tools such as Power BI, I am passionate about leveraging my skills to contribute to impactful projects and foster team growth</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Evans Chaun</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">24 April</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary"></span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">2 Years</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+254 743 645 826</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">evanschaun2@gmail.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Embakasi, Nairobi, Kenya</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
-                    </div>
-                    <a href="" class="btn btn-outline-primary mr-4">Hire Me</a>
-                    <a href="" class="btn btn-outline-primary">Learn More</a>
-                </div>
+                <a href="" class="btn btn-outline-primary mr-4">Hire Me</a>
+                <a href="" class="btn btn-outline-primary">Learn More</a>
             </div>
         </div>
     </div>
-    <!-- About End -->
+</div>
+<!-- Contributions Start -->
+<div class="container-fluid py-5" id="contributions">
+    <div class="container">
+        <div class="position-relative d-flex align-items-center justify-content-center">
+            <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contributions</h1>
+            <h1 class="position-absolute text-uppercase text-primary">Contributions & Publications</h1>
+            
+        </div>
+        <div class="row align-items-center">
+            <p>I have made significant contributions in software development and research. Here are some of his key contributions and publications:</p>
+               
+            <div class="col-lg-6 pb-4 pb-lg-0">
+                <ul class="list-unstyled">
+                    <li><a href="https://www.cloudzilla.ai/dev-education/servlet-request-and-servlet-collaboration/">Servlet Request and Servlet Collaboration</a></li>
+                    <li><a href="https://www.cloudzilla.ai/dev-education/using-session-in-java-servlets/">Using Session in Java</a></li>
+                    <li><a href="https://www.cloudzilla.ai/dev-education/the-concept-of-cookies-in-servlets/">The Concept of Cookies in Programming</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-6 pb-4 pb-lg-0">
+                <ul class="list-unstyled">
+                    <li><a href="https://www.cloudzilla.ai/dev-education/send-redirect-in-servlet-collaboration/">Send Redirect in Servlet Collaboration</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            
+           
+        </div>
+    </div>
+</div>
+<!-- Contributions End -->
+
 
 
     <!-- Qualification Start -->
@@ -586,6 +617,8 @@
             </p>
         </div>
     </div>
+<!-- whatsapp -->
+
     <!-- Footer End -->
 
     <!-- Scroll to Bottom -->
@@ -611,6 +644,50 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+
+     <!-- WhatsApp icon with a link -->
+     <div class="whatsapp-icon">
+        <a
+            href="https://wa.me/254743645826?text=Hello%20Mr.%20Chaun%2C%20I%20have%20an%20opportunity%20and%20I%20am%20impressed%20with%20your%20work.%20I%20would%20like%20to%20discuss%20further."
+            class="btn btn-success btn-lg rounded-circle"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+    
+    <style>
+    .whatsapp-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+    
+    .whatsapp-icon a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60px;
+        height: 60px;
+        background-color: #25d366;
+        color: white;
+        border-radius: 50%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    .whatsapp-icon a:hover {
+        background-color: #20b358;
+        text-decoration: none;
+    }
+    </style>
+    
+    </div>
 </body>
 
 </html>
+
