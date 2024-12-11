@@ -116,7 +116,7 @@
 })(jQuery);
 
 function handleCVDownload() {
-    const fileUrl = 'evans-chaun-CV.pdf'; // Path to the file
+    const fileUrl = 'CV-Evans-Chaun.pdf'; // Path to the file
 
     // Open the file in a new tab for viewing
     const newTab = window.open(fileUrl, '_blank');
