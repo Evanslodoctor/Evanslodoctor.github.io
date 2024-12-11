@@ -38,7 +38,7 @@ $(function () {
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                             .append("</button>");
-                    $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ", it seems that our mail server is not responding. Please try again later!"));
+                    $('#success > .alert-danger').append($("<strong>").text("Sorry " + name + ",It seems that our mail server is not responding. Please try again later! Alternatively, use WhatsApp on the bottom-right corner to contact me directly."));
                     $('#success > .alert-danger').append('</div>');
                     $('#contactForm').trigger("reset");
                 },
