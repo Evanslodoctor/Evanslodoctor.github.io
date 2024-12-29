@@ -9938,6 +9938,7 @@ h6,
   border-radius: 4px;
   opacity: 0;
   transition: .5s;
+  
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -9946,6 +9947,13 @@ h6,
   height: calc(100% - 60px);
   top: 30px;
   left: 30px;
+  color: white;
+}
+.portfolio-item:hover .portfolio-btn a {
+  color: white;
+  font-size: x-large;
+  text-decoration: none;
+  color: white;
 }
 
 .testimonial-carousel .owl-dots {
