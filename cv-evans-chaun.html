@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evans Loktari Chaun - Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;  /* Professional blue */
+            --secondary-color: #1e40af;  /* Darker blue */
+            --accent-color: #3b82f6;   /* Lighter blue */
+            --light-color: #f8fafc;     /* Very light gray */
+            --dark-color: #1e293b;      /* Dark slate */
+            --text-color: #334155;      /* Dark gray */
+            --text-light: #64748b;      /* Medium gray */
+            --border-color: #e2e8f0;    /* Light gray border */
+            --success-color: #10b981;   /* Green for highlights */
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f1f5f9;
+            font-weight: 400;
+        }
+        
+        .cv-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 40px;
+            position: relative;
+        }
+        
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            object-fit: cover;
+            position: absolute;
+            right: 40px;
+            top: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.5px;
+        }
+        
+        .title {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 5px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .contact-item i {
+            font-size: 0.9rem;
+        }
+        
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 3px;
+        }
+        
+        .summary-text {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-color);
+        }
+        
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .skill-category h4 {
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-category h4 i {
+            color: var(--primary-color);
+        }
+        
+        .skill-list {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-list li {
+            background: white;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .skill-list li i {
+            color: var(--primary-color);
+            font-size: 0.8rem;
+        }
+        
+        .experience-item, .education-item, .project-item, .certification-item {
+            margin-bottom: 25px;
+        }
+        
+        .experience-header, .education-header, .project-header, .certification-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+        
+        .job-title, .degree, .project-name, .cert-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--dark-color);
+        }
+        
+        .company, .university {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+        
+        .date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            background: var(--light-color);
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+        
+        .experience-details, .project-details {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        
+        .experience-details li, .project-details li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .experience-details li::before, .project-details li::before {
+            content: '\f054';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 0.8rem;
+        }
+        
+        .project-tech {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.85rem;
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .project-tech span {
+            background: var(--light-color);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        
+        .reference-item {
+            margin-bottom: 20px;
+            background: var(--light-color);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .reference-name {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 5px;
+        }
+        
+        .reference-position {
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        
+        .reference-contact {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .reference-contact span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .reference-contact i {
+            width: 16px;
+            text-align: center;
+        }
+        
+        .action-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            gap: 12px;
+            z-index: 100;
+        }
+        
+        .btn-print {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-print:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .badge-pill {
+            background-color: var(--success-color);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 12px;
+            margin-left: 8px;
+        }
+        
+        @media print {
+            body {
+                background: none;
+                font-size: 12pt;
+            }
+            
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: 100%;
+                border-radius: 0;
+            }
+            
+            .action-buttons {
+                display: none;
+            }
+            
+            .header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+                padding: 30px;
+            }
+            
+            .section {
+                padding: 20px 30px;
+            }
+            
+            .skill-category {
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .profile-img {
+                position: static;
+                margin: 0 auto 20px auto;
+                display: block;
+            }
+            
+            .header {
+                text-align: center;
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .name {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 25px;
+            }
+            
+            .action-buttons {
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #f0f0f0;
+      border: none;
+      border-radius: 50%;
+      padding: 10px 12px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      z-index: 1000;
+      font-size: 20px;
+    }
+
+    .back-button:hover {
+      background-color: #ddd;
+    }
+    </style>
+</head>
+<body>
+    <button class="back-button" onclick="history.back()">🔙</button>
+    <div class="cv-container">
+        <div class="header">
+            <img src="https://ui-avatars.com/api/?name=Evans+Chaun&background=0D8ABC&color=fff&size=200" alt="Evans Loktari Chaun" class="profile-img">
+            <div>
+                <h1 class="name">Evans Loktari Chaun</h1>
+                <h2 class="title">Full Stack Web Developer</h2>
+                <div class="contact-info">
+                    <span class="contact-item"><i class="fas fa-phone"></i> +254-743-645-826</span>
+                    <span class="contact-item"><i class="fas fa-envelope"></i> evanschaun2@gmail.com</span>
+                    <span class="contact-item"><i class="fas fa-map-marker-alt"></i> Nairobi, Kenya</span>
+                    <span class="contact-item"><i class="fab fa-linkedin"></i> linkedin.com/in/odoctor</span>
+                    <span class="contact-item"><i class="fab fa-github"></i> github.com/Evanslodctor</span>
+                    <span class="contact-item"><i class="fas fa-globe"></i> prodevevans.netifiy.app</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-user-tie"></i> Professional Summary</h3>
+            <p class="summary-text">
+                Full Stack Web Developer with experience in designing and deploying secure, high-performance web applications. 
+                Skilled in HTML, CSS, JavaScript, PHP, Python, and SQL, with a strong track record in optimizing databases 
+                and resolving server-side errors. Successfully developed responsive websites and engineered dynamic backend 
+                systems to enhance user engagement. Eager to leverage technical expertise to contribute to innovative software 
+                development projects.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-code"></i> Technical Skills</h3>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4><i class="fas fa-laptop-code"></i> Front-End</h4>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-html5"></i> HTML5</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                        <li><i class="fab fa-react"></i> React</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-server"></i> Back-End</h4>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-php"></i> PHP</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-node-js"></i> Node.js</li>
+                        <li><i class="fas fa-project-diagram"></i> REST APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-database"></i> Databases</h4>
+                    <ul class="skill-list">
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                        <li><i class="fas fa-database"></i> SQL Server</li>
+                        <li><i class="fas fa-database"></i> MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-cloud"></i> DevOps & Cloud</h4>
+                    <ul class="skill-list">
+                        <li><i class="fab fa-aws"></i> AWS</li>
+                        <li><i class="fas fa-infinity"></i> CI/CD</li>
+                        <li><i class="fab fa-git-alt"></i> Git</li>
+                        <li><i class="fas fa-network-wired"></i> Docker</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-briefcase"></i> Work Experience</h3>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="job-title">Software Developer</span> - <span class="company">Kelzane Technologies</span>
+                    </div>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Jun 2023 - Feb 2024</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Developed a professional, responsive website using HTML5, CSS3, and JavaScript to enhance online presence.</li>
+                    <li>Optimized site visibility by implementing SEO best practices, resulting in increased organic traffic.</li>
+                    <li>Engineered a dynamic website for BCS by integrating robust backend systems to streamline operations and boost user engagement.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="job-title">Developer</span> - <span class="company">Digiview Training Institute</span>
+                    </div>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Apr 2022 - Jun 2022</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Managed IT systems and provided technical support, improving operational performance and reducing downtime.</li>
+                    <li>Analyzed student and operational data with Power BI to identify trends and improve efficiency by 25%.</li>
+                    <li>Enhanced website performance by optimizing page load times by 20% and implementing responsive design principles.</li>
+                    <li>Trained over 100 students in ICT-related courses, significantly elevating their practical knowledge.</li>
+                </ul>
+            </div>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="job-title">IT Intern</span> - <span class="company">National Hospital Insurance Fund (NHIF)</span>
+                    </div>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Jun 2019 - Jun 2023</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Automated user account creation using Active Directory, improving operational efficiency.</li>
+                    <li>Monitored core systems and networks using Wireshark and Nagios, maintaining 99.5% uptime.</li>
+                    <li>Designed and implemented an LMS using Django and MySQL, increasing user engagement by 30%.</li>
+                    <li>Optimized network configurations and security measures, reducing technical issues by 20%.</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="degree">Bachelor of Science in Computer Science</span> - <span class="university">Meru University of Science and Technology</span>
+                        <span class="badge-pill">First Class Honors</span>
+                    </div>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Jun 2019 - Jun 2023</div>
+                </div>
+                <ul class="experience-details">
+                    <li>Achieved First Class Honors and ranked in the top 1% of the class</li>
+                    <li>Coursework: Software Engineering, Data Structures & Algorithms, Web Development, AI</li>
+                </ul>
+            </div>
+            
+            <div class="education-item">
+                <div class="education-header">
+                    <div>
+                        <span class="degree">Software Engineering Program</span> - <span class="university">ALX</span>
+                    </div>
+                </div>
+                <ul class="experience-details">
+                    <li>Coursework: Full-Stack Development, Backend APIs, DevOps, Agile Development</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-project-diagram"></i> Key Projects</h3>
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-name">Digiview Training Institute Website</span>
+                </div>
+                <ul class="project-details">
+                    <li>Designed and developed a fully responsive website to enhance the online presence of Digiview Training Institute</li>
+                    <li>Integrated a user-friendly content management system (WordPress), enabling staff to update site content with ease</li>
+                    <li>Deployed on AWS for optimal performance, scalability, and reduced load times, increasing user retention by 20%</li>
+                </ul>
+                <div class="project-tech">
+                    <span><i class="fab fa-html5"></i> HTML5</span>
+                    <span><i class="fab fa-css3-alt"></i> CSS3</span>
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                    <span><i class="fab fa-wordpress"></i> WordPress</span>
+                    <span><i class="fab fa-aws"></i> AWS</span>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-name">Financial Management System (FMS)</span>
+                </div>
+                <ul class="project-details">
+                    <li>Developed a Financial Management System for small businesses enabling real-time tracking of income, expenses, and cash flow</li>
+                    <li>Integrated features like automated financial reporting and loan management, improving operational efficiency by 30%</li>
+                </ul>
+                <div class="project-tech">
+                    <span><i class="fab fa-php"></i> PHP</span>
+                    <span><i class="fas fa-database"></i> MySQL</span>
+                    <span><i class="fab fa-js"></i> JavaScript</span>
+                </div>
+            </div>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <span class="project-name">Biometric Voting Management System</span>
+                </div>
+                <ul class="project-details">
+                    <li>Engineered a biometric voting management system for election security using fingerprint recognition</li>
+                    <li>Developed backend using C# and SQL Server, ensuring high accuracy and low latency during verification</li>
+                    <li>Conducted rigorous testing to ensure reliability and security, reducing fraud risks by 80%</li>
+                </ul>
+                <div class="project-tech">
+                    <span><i class="fas fa-fingerprint"></i> Biometrics</span>
+                    <span><i class="fab fa-microsoft"></i> C#</span>
+                    <span><i class="fas fa-database"></i> SQL Server</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-certificate"></i> Certifications</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="certification-item">
+                        <div class="certification-header">
+                            <span class="cert-name">React Certification</span>
+                            <span class="date">Jan 2024</span>
+                        </div>
+                        <div class="company">Skill Up by Simplilearn</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="certification-item">
+                        <div class="certification-header">
+                            <span class="cert-name">Machine Learning</span>
+                            <span class="date">May 2024</span>
+                        </div>
+                        <div class="company">AWS Training</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="certification-item">
+                        <div class="certification-header">
+                            <span class="cert-name">Python Certification</span>
+                            <span class="date">Jan 2024</span>
+                        </div>
+                        <div class="company">Skill Up by Simplilearn</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="certification-item">
+                        <div class="certification-header">
+                            <span class="cert-name">Back-end Development</span>
+                            <span class="date">Sep 2022</span>
+                        </div>
+                        <div class="company">FreeCodeCamp</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3 class="section-title"><i class="fas fa-users"></i> References</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="reference-item">
+                        <div class="reference-name">John Doe</div>
+                        <div class="reference-position">Senior Developer, Kelzane Technologies</div>
+                        <div class="reference-contact">
+                            <span><i class="fas fa-phone"></i> +254 700 123 456</span>
+                            <span><i class="fas fa-envelope"></i> john.doe@kelzane.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="reference-item">
+                        <div class="reference-name">Jane Smith</div>
+                        <div class="reference-position">Director, Digiview Training Institute</div>
+                        <div class="reference-contact">
+                            <span><i class="fas fa-phone"></i> +254 722 987 654</span>
+                            <span><i class="fas fa-envelope"></i> jane.smith@digiview.edu</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="action-buttons">
+        <button class="btn-print" id="printBtn" title="Print Resume"><i class="fas fa-print"></i></button>
+        <button class="btn-print" id="pdfBtn" title="Download PDF"><i class="fas fa-file-pdf"></i></button>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('printBtn').addEventListener('click', function() {
+            window.print();
+        });
+        
+        document.getElementById('pdfBtn').addEventListener('click', function() {
+            const element = document.querySelector('.cv-container');
+            const opt = {
+                margin: 10,
+                filename: 'Evans_Chaun_Resume.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, logging: true, useCORS: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+            };
+            
+            // Show loading indicator
+            const originalContent = this.innerHTML;
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                // Restore original button content
+                this.innerHTML = originalContent;
+            });
+        });
+    </script>
+</body>
+</html>
